@@ -169,13 +169,13 @@
           
             <span style="color: rgb(88, 82, 82);"> M.R.P: <del>₹1000 </del></span>(75% off)
           </span>
-          <p id="show-quantity_2">1 x 60</p>
-          <p id="show-total_2"> Total = 60</p>
+          <p id="show-quantity_3">1 x 60</p>
+          <p id="show-total_3"> Total = 60</p>
           
           <div class="btn-container">
-            <img src="../Icons/minus.jpg" class="btn-quantity" onclick="decr()">
-            <span class="quantity-text" id="quantity-text_2">1</span>
-            <img   src="../Icons/add1.jpg" class=" add" onclick="incr()"><br>
+            <img src="../Icons/minus.jpg" class="btn-quantity" onclick="decre()">
+            <span class="quantity-text" id="quantity-text_3">1</span>
+            <img   src="../Icons/add1.jpg" class=" add" onclick="incre()"><br>
             
           </div>
           
@@ -197,13 +197,13 @@
           
             <span style="color: rgb(88, 82, 82);"> M.R.P: <del>₹1000 </del></span>(75% off)
           </span>
-          <p id="show-quantity_2">1 x 60</p>
-          <p id="show-total_2"> Total = 60</p>
+          <p id="show-quantity_4">1 x 60</p>
+          <p id="show-total_4"> Total = 60</p>
           
           <div class="btn-container">
-            <img src="../Icons/minus.jpg" class="btn-quantity" onclick="decr()">
-            <span class="quantity-text" id="quantity-text_2">1</span>
-            <img   src="../Icons/add1.jpg" class=" add" onclick="incr()"><br>
+            <img src="../Icons/minus.jpg" class="btn-quantity" onclick="decrem()">
+            <span class="quantity-text" id="quantity-text_4">1</span>
+            <img   src="../Icons/add1.jpg" class=" add" onclick="increm()"><br>
             
           </div>
           
@@ -353,5 +353,205 @@
        
             </div>
         </footer>
+        <div class="copyrighttext">
+            <p>Copyright © 2024 Happy Sips. All rights reserved.</p>
+          </div>
+
+
+          <script>
+            function juice(a)
+                 {
+                    const variety = document.getElementById('variety');
+                    if(a=='fruit')
+                    {
+                    variety.src = '../videos/orange_juice.mp4';
+                    }
+                    else if(a=='veg')
+                     {
+                         variety.src = '../videos/veg.mp4';
+                     }
+                     
+         
+                     else if(a=='mixed')
+                     {
+                         variety.src = '../videos/mixed.mp4';
+                     }
+                     
+                   }
+          const quantityText = document.getElementById("quantity-text");
+           const showQuantity = document.getElementById("show-quantity");
+           const showTotal = document.getElementById("show-total");
+         function inc()
+         {
+          
+           let quantity = parseInt(quantityText.innerText);
+           if(quantity < 5)
+           {
+             quantityText.innerText = ++quantity;
+           }
+           else
+           {
+             alert("you cant add more than 5 items")
+           }
+           showQuantity.innerText = `${quantity} x 50`;
+           showTotal.innerText = `Total:${quantity * 50}`
+         }
+         function dec()
+         {
+           let quantity = parseInt(quantityText.innerText);
+           if(quantity > 1)
+           {
+             quantityText.innerText = --quantity;
+           }
+           else
+           {
+             alert("you cant add less than 1 items")
+           }
+           showQuantity.innerText = `${quantity} x 50`
+           showTotal.innerHTML = `Total:${quantity * 50}`
+         }
+         const quantityText_1 = document.getElementById("quantity-text_1");
+           const showQuantity_1 = document.getElementById("show-quantity_1");
+           const showTotal_1 = document.getElementById("show-total_1");
+         function increment()
+         {
+          
+           let quantity = parseInt(quantityText_1.innerText);
+           if(quantity < 5)
+           {
+             quantityText_1.innerText = ++quantity;
+           }
+           else
+           {
+             alert("you cant add more than 5 items")
+           }
+           showQuantity_1.innerText = `${quantity} x 65`;
+           showTotal_1.innerText = `Total:${quantity * 65}`
+         }
+         
+         function decrement()
+         {
+           let quantity = parseInt(quantityText_1.innerText);
+           if(quantity > 1)
+           {
+             quantityText_1.innerText = --quantity;
+           }
+           else
+           {
+             alert("you cant add less than 1 items")
+           }
+           showQuantity_1.innerText = `${quantity} x 50`
+           showTotal_1.innerHTML = `Total:${quantity * 50}`
+         }
+         
+         
+         
+         const quantityText_2 = document.getElementById("quantity-text_2");
+           const showQuantity_2 = document.getElementById("show-quantity_2");
+           const showTotal_2 = document.getElementById("show-total_2");
+         function incr()
+         {
+          
+           let quantity = parseInt(quantityText_2.innerText);
+           if(quantity < 5)
+           {
+             quantityText_2.innerText = ++quantity;
+           }
+           else
+           {
+             alert("you cant add more than 5 items")
+           }
+           showQuantity_2.innerText = `${quantity} x 60`;
+           showTotal_2.innerText = `Total:${quantity * 60}`
+         }
+         
+         function decr()
+         {
+           let quantity = parseInt(quantityText_2.innerText);
+           if(quantity > 1)
+           {
+             quantityText_2.innerText = --quantity;
+           }
+           else
+           {
+             alert("you cant add less than 1 items")
+           }
+           showQuantity_2.innerText = `${quantity} x 60`
+           showTotal_2.innerHTML = `Total:${quantity * 60}`
+         }
+
+  const quantityText_3 = document.getElementById("quantity-text_3");
+  const showQuantity_3 = document.getElementById("show-quantity_3");
+  const showTotal_3 = document.getElementById("show-total_3");
+
+         function incre()
+{
+ 
+  let quantity = parseInt(quantityText_3.innerText);
+  if(quantity < 5)
+  {
+    quantityText_3.innerText = ++quantity;
+  }
+  else
+  {
+    alert("you cant add more than 5 items")
+  }
+  showQuantity_3.innerText = `${quantity} x 60`;
+  showTotal_3.innerText = `Total:${quantity * 60}`
+}
+
+function decre()
+{
+  let quantity = parseInt(quantityText_3.innerText);
+  if(quantity > 1)
+  {
+    quantityText_3.innerText = --quantity;
+  }
+  else
+  {
+    alert("you cant add less than 1 items")
+  }
+  showQuantity_3.innerText = `${quantity} x 60`
+  showTotal_3.innerHTML = `Total:${quantity * 60}`
+}
+
+
+
+  const quantityText_4 = document.getElementById("quantity-text_4");
+  const showQuantity_4 = document.getElementById("show-quantity_4");
+  const showTotal_4 = document.getElementById("show-total_4");
+
+         function increm()
+{
+ 
+  let quantity = parseInt(quantityText_4.innerText);
+  if(quantity < 5)
+  {
+    quantityText_4.innerText = ++quantity;
+  }
+  else
+  {
+    alert("you cant add more than 5 items")
+  }
+  showQuantity_4.innerText = `${quantity} x 60`;
+  showTotal_4.innerText = `Total:${quantity * 60}`
+}
+
+function decrem()
+{
+  let quantity = parseInt(quantityText_4.innerText);
+  if(quantity > 1)
+  {
+    quantityText_4.innerText = --quantity;
+  }
+  else
+  {
+    alert("you cant add less than 1 items")
+  }
+  showQuantity_4.innerText = `${quantity} x 60`
+  showTotal_4.innerHTML = `Total:${quantity * 60}`
+}
+
+          </script>
 </body>
 </html>
