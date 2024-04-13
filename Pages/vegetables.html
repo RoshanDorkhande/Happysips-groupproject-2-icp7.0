@@ -229,9 +229,9 @@
           <p id="show-total_2"> Total = 60</p>
           
           <div class="btn-container">
-            <img src="../Icons/minus.jpg" class="btn-quantity" onclick="decr()">
-            <span class="quantity-text" id="quantity-text_2">1</span>
-            <img   src="../Icons/add1.jpg" class=" add" onclick="incr()"><br>
+            <img src="../Icons/minus.jpg" class="btn-quantity" onclick="minus()">
+            <span class="quantity-text" id="quantity-text_5">1</span>
+            <img   src="../Icons/add1.jpg" class=" add" onclick="plus()"><br>
             
           </div>
           
@@ -550,6 +550,41 @@ function decrem()
   }
   showQuantity_4.innerText = `${quantity} x 60`
   showTotal_4.innerHTML = `Total:${quantity * 60}`
+}
+
+const quantityText_5 = document.getElementById("quantity-text_5");
+  const showQuantity_5= document.getElementById("show-quantity_5");
+  const showTotal_5 = document.getElementById("show-total_5");
+
+         function plus()
+{
+ 
+  let quantity = parseInt(quantityText_5.innerText);
+  if(quantity < 5)
+  {
+    quantityText_5.innerText = ++quantity;
+  }
+  else
+  {
+    alert("you cant add more than 5 items")
+  }
+  showQuantity_5.innerText = `${quantity} x 60`;
+  showTotal_5.innerText = `Total:${quantity * 60}`
+}
+
+function minus()
+{
+  let quantity = parseInt(quantityText_5.innerText);
+  if(quantity > 1)
+  {
+    quantityText_5.innerText = --quantity;
+  }
+  else
+  {
+    alert("you cant add less than 1 items")
+  }
+  showQuantity_5.innerText = `${quantity} x 60`
+  showTotal_5.innerHTML = `Total:${quantity * 60}`
 }
 
           </script>
