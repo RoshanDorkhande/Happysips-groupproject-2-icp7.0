@@ -34,7 +34,7 @@
               class="searchbar"
             />
             <div class="simg">
-              <img src="/Icons/search-interface-symbol (1).png" class="search-img" />
+              <img src="./../Icons/search-interface-symbol (1).png" class="search-img" />
             </div>
           </div>
         </div>
@@ -225,13 +225,13 @@
           
             <span style="color: rgb(88, 82, 82);"> M.R.P: <del>₹1000 </del></span>(75% off)
           </span>
-          <p id="show-quantity_2">1 x 60</p>
-          <p id="show-total_2"> Total = 60</p>
+          <p id="show-quantity_5">1 x 60</p>
+          <p id="show-total_5"> Total = 60</p>
           
           <div class="btn-container">
-            <img src="../Icons/minus.jpg" class="btn-quantity" onclick="decr()">
-            <span class="quantity-text" id="quantity-text_2">1</span>
-            <img   src="../Icons/add1.jpg" class=" add" onclick="incr()"><br>
+            <img src="../Icons/minus.jpg" class="btn-quantity" onclick="minus()">
+            <span class="quantity-text" id="quantity-text_5">1</span>
+            <img   src="../Icons/add1.jpg" class=" add" onclick="plus()"><br>
             
           </div>
           
@@ -253,13 +253,13 @@
           
             <span style="color: rgb(88, 82, 82);"> M.R.P: <del>₹1000 </del></span>(75% off)
           </span>
-          <p id="show-quantity_2">1 x 60</p>
-          <p id="show-total_2"> Total = 60</p>
+          <p id="show-quantity_6">1 x 60</p>
+          <p id="show-total_6"> Total = 60</p>
           
           <div class="btn-container">
-            <img src="../Icons/minus.jpg" class="btn-quantity" onclick="decr()">
-            <span class="quantity-text" id="quantity-text_2">1</span>
-            <img   src="../Icons/add1.jpg" class=" add" onclick="incr()"><br>
+            <img src="../Icons/minus.jpg" class="btn-quantity" onclick="sub()">
+            <span class="quantity-text" id="quantity-text_6">1</span>
+            <img   src="../Icons/add1.jpg" class=" add" onclick="add()"><br>
             
           </div>
           
@@ -281,13 +281,13 @@
           
             <span style="color: rgb(88, 82, 82);"> M.R.P: <del>₹1000 </del></span>(75% off)
           </span>
-          <p id="show-quantity_2">1 x 60</p>
-          <p id="show-total_2"> Total = 60</p>
+          <p id="show-quantity_7">1 x 60</p>
+          <p id="show-total_7"> Total = 60</p>
           
           <div class="btn-container">
-            <img src="../Icons/minus.jpg" class="btn-quantity" onclick="decr()">
-            <span class="quantity-text" id="quantity-text_2">1</span>
-            <img   src="../Icons/add1.jpg" class=" add" onclick="incr()"><br>
+            <img src="../Icons/minus.jpg" class="btn-quantity" onclick="subtraction()">
+            <span class="quantity-text" id="quantity-text_7">1</span>
+            <img   src="../Icons/add1.jpg" class=" add" onclick="addition()"><br>
             
           </div>
           
@@ -551,6 +551,113 @@ function decrem()
   showQuantity_4.innerText = `${quantity} x 60`
   showTotal_4.innerHTML = `Total:${quantity * 60}`
 }
+
+const quantityText_5 = document.getElementById("quantity-text_5");
+  const showQuantity_5= document.getElementById("show-quantity_5");
+  const showTotal_5 = document.getElementById("show-total_5");
+
+         function plus()
+{
+ 
+  let quantity = parseInt(quantityText_5.innerText);
+  if(quantity < 5)
+  {
+    quantityText_5.innerText = ++quantity;
+  }
+  else
+  {
+    alert("you cant add more than 5 items")
+  }
+  showQuantity_5.innerText = `${quantity} x 60`;
+  showTotal_5.innerText = `Total:${quantity * 60}`
+}
+
+function minus()
+{
+  let quantity = parseInt(quantityText_5.innerText);
+  if(quantity > 1)
+  {
+    quantityText_5.innerText = --quantity;
+  }
+  else
+  {
+    alert("you cant add less than 1 items")
+  }
+  showQuantity_5.innerText = `${quantity} x 60`
+  showTotal_5.innerHTML = `Total:${quantity * 60}`
+}
+
+const quantityText_6 = document.getElementById("quantity-text_6");
+  const showQuantity_6= document.getElementById("show-quantity_6");
+  const showTotal_6 = document.getElementById("show-total_6");
+
+         function add()
+{
+ 
+  let quantity = parseInt(quantityText_6.innerText);
+  if(quantity < 5)
+  {
+    quantityText_6.innerText = ++quantity;
+  }
+  else
+  {
+    alert("you cant add more than 5 items")
+  }
+  showQuantity_6.innerText = `${quantity} x 60`;
+  showTotal_6.innerText = `Total:${quantity * 60}`
+}
+
+function sub()
+{
+  let quantity = parseInt(quantityText_6.innerText);
+  if(quantity > 1)
+  {
+    quantityText_6.innerText = --quantity;
+  }
+  else
+  {
+    alert("you cant add less than 1 items")
+  }
+  showQuantity_6.innerText = `${quantity} x 60`
+  showTotal_6.innerHTML = `Total:${quantity * 60}`
+}
+
+
+const quantityText_7 = document.getElementById("quantity-text_7");
+  const showQuantity_7= document.getElementById("show-quantity_7");
+  const showTotal_7 = document.getElementById("show-total_7");
+
+         function addition()
+{
+ 
+  let quantity = parseInt(quantityText_7.innerText);
+  if(quantity < 5)
+  {
+    quantityText_7.innerText = ++quantity;
+  }
+  else
+  {
+    alert("you cant add more than 5 items")
+  }
+  showQuantity_7.innerText = `${quantity} x 60`;
+  showTotal_7.innerText = `Total:${quantity * 60}`
+}
+
+function subtraction()
+{
+  let quantity = parseInt(quantityText_7.innerText);
+  if(quantity > 1)
+  {
+    quantityText_7.innerText = --quantity;
+  }
+  else
+  {
+    alert("you cant add less than 1 items")
+  }
+  showQuantity_7.innerText = `${quantity} x 60`
+  showTotal_7.innerHTML = `Total:${quantity * 60}`
+}
+
 
           </script>
 </body>
